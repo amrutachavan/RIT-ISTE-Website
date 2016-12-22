@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>agc9066P2 </title>
+  
+  <link href="css/jquery-ui.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.3.0/balloon.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/dataTables.jqueryui.min.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="css/isteWebSite.css">
+
+  <script src="https://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+  <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"/>
+  <script src="js/jquery.stellar.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/stellar.js/0.6.2/jquery.stellar.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src = "https://bitstorm.org/jquery/shadow-animation/jquery.animate-shadow-min.js"></script>
+  <script src="https://unpkg.com/masonry-layout@4.1.1/dist/masonry.pkgd.js" type="text/javascript"></script>
+  <script src="js/jquery.balloon.js" type="text/javascript"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js" type="text/javascript"></script>
+  <script src="https://oxism.com/maskew/maskew.min.js" type="text/javascript"></script>
+  <script src="//cdn.jsdelivr.net/jquery.shadow-animation/1/mainfile"></script>
+  <script src="js/isteWebsite.js"></script>
+</head>
+<body class="body">
+ 	<div>
+  	
+  	<section id="content1" class="content" style="text-align:center" data-stellar-background-ratio="0.5">
+  		<h1 style="text-align:center; margin-bottom:70px"><a href="https://www.rit.edu/"><img src="images/ritLogo2.gif" style="background-color:white"></img></a>    INFORMATION SCIENCES & TECHNOLOGIES @ RIT </h1>
+  		<div id ="content1q" class= "quote"></div>
+  	</section>
+
+	<section id="content2"  class="content" data-stellar-background-ratio="0.5">
+		<h1 style="text-align:center">Our Degrees(UnderGraduate/Graduate)</h1>
+		<div id="card" class="cardClass" title="click to flip" data-balloon-length="large">
+			<div class="front" id="undergrad" title="click to flip" data-balloon-length="large">
+				<h1 style="text-align:center">Our Undergraduate Degrees</h1>
+			</div>
+			<div class="back" id="grad" title="click to flip" data-balloon-length="large">
+				<h1 style="text-align:center">Our Graduate Degrees</h1>
+			</div>
+		</div>
+	</section>
+	
+	<section id="content4"  class="content" data-stellar-background-ratio="0.5">
+		<div>
+			<h1 style="text-align:center">Our People</h1>
+			<h2 style="text-align:center">Faculty</h2>
+		</div>
+		<div id= "facultyList" class ="facultyList"></div>
+		<div  id="dialog" class="dialogBox">
+  			<p id ="facultydetails"></p>
+		</div>
+	</section>
+	<section id="content5"  class="content" data-stellar-background-ratio="0.5">
+		<div id =EmploymentHeader>
+			<h1 style="text-align:center">Employment</h1>
+			<h2 style="text-align:center">Academic excellence equals career performance</h2>
+			<div >
+				<p id="employmentDesc" ></p>
+			</div>
+		</div>
+		<section style="margin:50px;padding-left:50px;">
+			
+			<div class ="stats" style="background-color:#ff6600" id="stats1" onmouseover="animateBox(this)">
+				<p id="empStats1" style="text-align:center"></p>
+			</div>
+			<div class ="stats" style="background-color:#ff6600" id="stats3" onmouseover="animateBox(this)">
+				<p id="empStats3" style="text-align:center"></p>
+			</div>
+			<div class ="stats" style="background-color:#ff6600" id="stats2" onmouseover="animateBox(this)">
+				<p id="empStats2" style="text-align:center"></p>
+			</div>
+			
+		</section>
+		<div id =EmploymentHeader>
+			<h1 style="text-align:center">Cooperative Education</h1>
+			<p id="coopDesc"></p>
+		</div>
+	</section>
+	<section id="content6" style="padding:50px;" class="content" data-stellar-background-ratio="0.5">
+		<div id =MapHeader style="text-align:center">
+			<h1 style="text-align:center">Where Our Students Work</h1>
+			<iframe src="https://ist.rit.edu/api/map/" width="800" height="400" id="frameDemo" style="padding-left:30px;padding-top:20px;"></iframe>
+		</div>
+		<div id= "EmpList" class ="EmpList" style="margin:30px" >
+			<p id ="empListp" class="employerNames" onclick="loadEmployeeList()" title="click to get list" onmouseover="animateBox(this)">Employer Names</p>
+		</div>
+		<div id="empListdialog" style="background-color:white; height:700px;width: 500px; display:none" class="dialogBoxEmp">
+  			<div id ="empListdetails" class="dialogBoxEmp" style="width:350px !important;"></div>
+		</div>
+	</section>
+
+	<section id="content6"  class="content" data-stellar-background-ratio="0.5">
+		<div>
+			<h1 style="text-align:center">Faculty Research: Areas of Interest</h1>
+		</div>
+		<div id= "facultyResList" class ="facultyResList" title="Click for more"></div>
+		<div  id="dialogRes" class="dialogBox">
+  			<p id ="facultyResdetails"></p>
+		</div>
+	</section>
+
+	<section id="content7"  class="content" data-stellar-background-ratio="0.5">
+		<div id= "EmpList" class ="EmpList" style="margin:30px" >
+			<p id ="empListp" class="employerNames" onclick="loadContactForm()" title="click to get list" onmouseover="animateBox(this)">Contact Form</p>
+		</div>
+		<div style="display:none" id="contactForm" style="text-align:center">
+			<iframe src="https://ist.rit.edu/api/contactForm/" style="background:white;align:center;" width="800" height="400" id="frameDemo" style="padding-left:30px;padding-top:20px;"></iframe>
+		</div>
+	</section>
+
+	
+
+
+
+	
+
+	
+
+	
+</div>
+</body>
+</html>
